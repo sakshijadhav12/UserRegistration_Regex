@@ -7,15 +7,15 @@ namespace UserRegistrationProgram
         static void Main(string[] args)
         {
             Console.WriteLine("User Registration Program");
-            Console.WriteLine("Enter first Name:");
+            Console.WriteLine("Enter last Name:");
             string userInput = Console.ReadLine();
             if (ValidateInput(userInput)) 
             {
-                Console.WriteLine("{0} is valid first name", userInput);
+                Console.WriteLine("{0} is valid last name", userInput);
             }
             else
             {
-                Console.WriteLine("{0} is not  valid first name plz enter valid one", userInput);
+                Console.WriteLine("{0} is not  valid last name plz enter valid one", userInput);
             }
         
 
