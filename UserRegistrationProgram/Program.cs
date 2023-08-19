@@ -7,23 +7,23 @@ namespace UserRegistrationProgram
         static void Main(string[] args)
         {
             Console.WriteLine("User Registration Program");
-            Console.WriteLine("Enter Email:");
+            Console.WriteLine("Enter phone number:");
             string userInput = Console.ReadLine();
             if (ValidateInput(userInput)) 
             {
-                Console.WriteLine("given email is valid");
+                Console.WriteLine("given phone number is valid");
             }
             else
             {
-                Console.WriteLine("given email is not  valid plz enter valid one");
+                Console.WriteLine("given pone number is not  valid plz enter valid one");
             }
         
 
         }
         public  static bool ValidateInput(string userInput)
         {
-            string email = "^[a-zA-Z0-9]*[._+-]?[a-zA-Z0-9]+@[0-9a-z]+.[a-z]+.?[a-z]+$";
-            return Regex.IsMatch(userInput, email);
+            string number = @"^91 \d{10}$";
+            return Regex.IsMatch(userInput, number);
 
 
 
