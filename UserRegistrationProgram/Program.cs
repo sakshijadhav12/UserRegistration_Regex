@@ -15,14 +15,14 @@ namespace UserRegistrationProgram
             }
             else
             {
-                Console.WriteLine("given passwordis number not  valid ,plz enter password of atleadt 8 chrachters");
+                Console.WriteLine("given passwordis number not  valid ,plz enter password of atleadt 8 chrachters and one UpperCase");
             }
         
 
         }
         public  static bool ValidateInput(string userInput)
         {
-            string password = @"^.{8,}$";
+            string password = "^(?=.*[A-Z]).{8,}$";
             return Regex.IsMatch(userInput, password);
 
 
