@@ -7,7 +7,7 @@ namespace UserRegistrationProgram
         static void Main(string[] args)
         {
             Console.WriteLine("User Registration Program");
-            Console.WriteLine("Enter a passward with a one digit ,one uppercase and it should have atleast 8 characters:");
+            Console.WriteLine("Enter a passward:");
             string userInput = Console.ReadLine();
             if (ValidateInput(userInput)) 
             {
@@ -22,7 +22,7 @@ namespace UserRegistrationProgram
         }
         public  static bool ValidateInput(string userInput)
         {
-            string password = "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";
+            string password = @"^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%&*!+=%]).{8,}$";
             return Regex.IsMatch(userInput, password);
 
 
