@@ -7,23 +7,23 @@ namespace UserRegistrationProgram
         static void Main(string[] args)
         {
             Console.WriteLine("User Registration Program");
-            Console.WriteLine("Enter phone number:");
+            Console.WriteLine("Enter a passward:");
             string userInput = Console.ReadLine();
             if (ValidateInput(userInput)) 
             {
-                Console.WriteLine("given phone number is valid");
+                Console.WriteLine("password is valid");
             }
             else
             {
-                Console.WriteLine("given pone number is not  valid plz enter valid one");
+                Console.WriteLine("given passwordis number not  valid ,plz enter password of atleadt 8 chrachters");
             }
         
 
         }
         public  static bool ValidateInput(string userInput)
         {
-            string number = @"^91 \d{10}$";
-            return Regex.IsMatch(userInput, number);
+            string password = @"^.{8,}$";
+            return Regex.IsMatch(userInput, password);
 
 
 
